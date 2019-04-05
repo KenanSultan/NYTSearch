@@ -16,19 +16,20 @@ $.ajax ({
     url: qurl,
     data: {
         q: searchInput,
-        "api-key": apikey
+        "api-key": apikey,
         "begin_date": startYear + "0101",
         "end_date": endYear + "0101"
     }
 }).done (function (resp) {
+    $(".panel-footer").empty()
 
-    for ( let i = 0; i < numbers; i++ ) {
+    for ( let i = 0; i < number; i++ ) {
     var holderDiv = $("<div>")
     holderDiv.addClass("holder")
     
     var articleNumber = $("<span>")
     articleNumber.addClass ("article-number")
-    articleNumber.html(i)
+    articleNumber.html(i+1)
     holderDiv.append (articleNumber)
     
     var articleHead = $("<h1>") 
@@ -40,6 +41,8 @@ $.ajax ({
     autor.addClass("article-autor")
     autor.html(resp.response.docs[i].byline.original)
     holderDiv.append (autor)
+
+    $(".panel-footer").append(holderDiv)
 
 
     }

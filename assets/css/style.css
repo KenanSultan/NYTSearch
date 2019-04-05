@@ -1,0 +1,13 @@
+.panel-footer {
+    background-color: rgb(168, 173, 177);
+}
+
+.article-number {
+    background-color: rgb(32, 29, 29);
+    border-radius: 10px;
+    color: aliceblue;
+    float: left;
+}
+.article-head {
+    display: inline-block;
+}

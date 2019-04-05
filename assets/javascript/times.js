@@ -11,14 +11,35 @@ var number = $("#sel1").val()
 var startYear = $("#start-year").val()
 
 var endYear = $("#end-year").val()
-$ajax ({
+$.ajax ({
     url: qurl,
     data: {
         q: searchInput,
         "api-key": apikey
     }
-}).done (function (response) {
-    console.log (response)
+}).done (function (resp) {
+
+    for ( let i = 0; i < numbers; i++ ) {
+    var holderDiv = $("<div>")
+    holderDiv.addClass("holder")
+    
+    var articleNumber = $("<span>")
+    articleNumber.addClass ("article-number")
+    articleNumber.html(i)
+    holderDiv.append (articleNumber)
+    
+    var articleHead = $("<h1>") 
+    articleHead.addClass("article-head")
+    articleHead.html(resp.response.docs[i].headline.name)
+    holderDiv.append (articleHead)
+    
+    var autor = $("<p>")
+    autor.addClass("article-autor")
+    autor.html(resp.response.docs[i].byline.original)
+    holderDiv.append (autor)
+
+
+    }
 })
 
 })

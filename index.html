@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootswatch/3.3.6/flatly/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div class="jumbotron">   
+            <h1>New York Times </h1>  
+        </div>
+    </div>
+    
+    <div class="container" id="parametrs">
+            <div class="panel-group">
+              <div class="panel panel-default">
+                <div class="panel-heading" id="searc-term"> Search Parameters</div>
+                <div class="panel-body">
+                    <p>Search Term</p>
+                    <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </div>
+              <form>
+                    <div class="form-group">
+                      <label for="sel1">Select list (select one):</label>
+                      <select class="form-control" id="sel1">
+                        <option>1</option>
+                        <option>5</option>
+                        <option>10</option>
+                      </select>
+                    </div>
+                </form>
+                <div class="panel-body" id="start-year">
+                        <p>Start Year (Optional):</p>
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </div>
+                <div class="panel-body" id="end-year">
+                        <p>End Year (Optional):</p>
+                        <input class="form-control" type="text" placeholder="Search" aria-label="Search">
+                </div>
+                <button type="button" class="btn" id="search-btn">Search</button>
+                <button type="button" class="btn" id="clear-btn">Clear Result</button>
+            </div>
+          </div>
+
+          <div class="panel panel-default">
+                <div class="panel-body articles"> Top Articles</div>
+                <div class="panel-footer"></div>
+        </div>
+</body>
+</html>

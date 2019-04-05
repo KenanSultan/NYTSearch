@@ -64,5 +64,5 @@ $("#search-btn").on("click", function () {
 })
 
 $("#clear-btn").on("click", function () {
-    $(".articles").empty()
+    $(".panel-footer").empty()
 })

@@ -16,13 +16,13 @@ $.ajax ({
     url: qurl,
     data: {
         q: searchInput,
-        "api-key": apikey
+        "api-key": apikey,
         "begin_date": startYear + "0101",
         "end_date": endYear + "0101"
     }
 }).done (function (resp) {
 
-    for ( let i = 0; i < numbers; i++ ) {
+    for ( let i = 0; i < number; i++ ) {
     var holderDiv = $("<div>")
     holderDiv.addClass("holder")
     

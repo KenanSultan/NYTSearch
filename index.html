@@ -8,28 +8,33 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="container">
-        <div class="jumbotron">   
+    <div class="container" style="background-color:#20315A; color: white; padding: 20px;">
+        <div class="jumbotron" style="background-color:#20315A;  text-align: center;">   
             <h1>New York Times </h1>  
         </div>
     </div>
+    <br>
+    <br>
     
-    <div class="container" id="parametrs">
+    <div class="container" id="parametrs" style="padding: 15px; bored: 1px solid #20315A; ">
             <div class="panel-group">
               <div class="panel panel-default">
-                <div class="panel-heading" id="searc-term"> Search Parameters</div>
-                <div class="panel-body">
+                <div class="panel-heading" style="text-align: center; background-color: #20315A; color: white; " id="searc-term"> Search Parameters</div>
+                <div class="panel-body" style="border: 1px solid #20315A;"  >
                     <p>Search Term</p>
                     <input class="form-control" type="text" placeholder="Search" aria-label="Search">
-                </div>
+                <br>
+                <br>
               <form>
-                    <div class="form-group">
-                      <label for="sel1">Select list (select one):</label>
-                      <select class="form-control" id="sel1">
-                        <option>1</option>
-                        <option>5</option>
-                        <option>10</option>
-                      </select>
+                    <div class="panel-body" >
+                      <div class="form-group" >
+                        <label for="sel1">Select list (select one):</label>
+                        <select class="form-control" id="sel1">
+                          <option>1</option>
+                          <option>5</option>
+                          <option>10</option>
+                        </select>
+                      </div>
                     </div>
                 </form>
                 <div class="panel-body" id="start-year">
@@ -40,14 +45,28 @@
                         <p>End Year (Optional):</p>
                         <input class="form-control" type="text" placeholder="Search" aria-label="Search">
                 </div>
+                <div class="panel-body">
                 <button type="button" class="btn" id="search-btn">Search</button>
                 <button type="button" class="btn" id="clear-btn">Clear Result</button>
+                </div>
             </div>
           </div>
-
-          <div class="panel panel-default">
-                <div class="panel-body articles"> Top Articles</div>
-                <div class="panel-footer"></div>
         </div>
+      </div>
+        <div class="container" style="padding: 10px;">
+            <div class="row">
+                <div class="col-sm-12">
+                  <div class="panel panel-primary">
+                    <div class="panel-heading">
+                      <h3 class="panel-title"><strong><i class="fa fa-table"></i>   Top Articles</strong></h3>
+                    </div>
+                    <div class="panel-body" id="well-section">
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+        </div>
+        <script src="./jquery.js"></script>
 </body>
 </html>

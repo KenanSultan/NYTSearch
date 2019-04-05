@@ -21,6 +21,7 @@ $.ajax ({
         "end_date": endYear + "0101"
     }
 }).done (function (resp) {
+    $(".panel-footer").empty()
 
     for ( let i = 0; i < number; i++ ) {
     var holderDiv = $("<div>")
@@ -28,7 +29,7 @@ $.ajax ({
     
     var articleNumber = $("<span>")
     articleNumber.addClass ("article-number")
-    articleNumber.html(i)
+    articleNumber.html(i+1)
     holderDiv.append (articleNumber)
     
     var articleHead = $("<h1>") 
@@ -40,6 +41,8 @@ $.ajax ({
     autor.addClass("article-autor")
     autor.html(resp.response.docs[i].byline.original)
     holderDiv.append (autor)
+
+    $(".panel-footer").append(holderDiv)
 
 
     }
